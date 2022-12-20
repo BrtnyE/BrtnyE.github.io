@@ -17,13 +17,15 @@ $thankyou_page = "thank_you.html";
 This next bit loads the form field data into variables.
 If you add a form field, you will need to add it here.
 */
-$email_address = $_REQUEST['email_address'] ;
-$comments = $_REQUEST['comments'] ;
-$first_name = $_REQUEST['first_name'] ;
+$name = $_REQUEST['name'] ;
+$email = $_REQUEST['email'] ;
+$subject = $_REQUEST['subject'] ;
+$masage = $_REQUEST['masagge'] ;
 $msg = 
-"First Name: " . $first_name . "\r\n" . 
-"Email: " . $email_address . "\r\n" . 
-"Comments: " . $comments ;
+"Name: " . $name . "\r\n" . 
+"Email: " . $email . "\r\n" . 
+"Subject: " . $subject . "\r\n" . 
+"Massage: " . $massage;
 
 /*
 The following function checks for email injection.
