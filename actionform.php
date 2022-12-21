@@ -47,7 +47,6 @@ elseif ( isInjected($Name) || isInjected($Email)  || isInjected($Subject)   || i
 header( "Location: $error_page" );
 }
 
-// If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
 	mail( "$webmaster_email", "Feedback Form Results", $msg );
