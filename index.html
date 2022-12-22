@@ -217,61 +217,35 @@ button {
 		</p>
 		Hing Yiap Knitting Sdn Bhd<br><br>
 		
-		  <?php
-			 $action=$_REQUEST['action'];
-			 if ($action=="")    /* display the contact form */
-			 {
-			 ?>
-			 <form action="britneyedok03@gmail.com" method="POST" class="form" enctype="multipart/form-data">
-				 <div class="form-group">
-					 <input class="textbox-14" name="Name" type="text" placeholder="Name">
-					 <span class="focus-border-14"></span>
-				 </div>
-				 <br>
-
-				 <div class="form-group">
-					 <input class="textbox-14" name="email" type="text" placeholder="Email">
-					 <span class="focus-border-14"></span>
-				 </div>
-				 <br>
-
-				 <div class="form-group">
-					 <input class="textbox-14" name="subject" type="text" placeholder="Subject">
-					 <span class="focus-border-14"></span>
-				 </div>
-				 <br>
-
-				 <div class="form-group">
-					 <textarea class="textbox-14" name="massage" placeholder="Type your email here..."></textarea>
-					 <span class="focus-border-14"></span>
-				 </div>
-				 <br>
-
-				 <div class="btn-block">
-					 <button type="button" onclick="hello()" class="btn">Submit</button>
-				 </div>
-			 </form>
-			 <?php
-			 }
-			 else
-			 {
-			 $name=$_REQUEST['name'];
-			 $email=$_REQUEST['email'];
-			 $=$subject_REQUEST['subject'];
-			 $message=$_REQUEST['message'];
-			 if (($name=="")||($email=="")||($subject=="")||($message==""))
-			 {
-			 echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-			 }
-			 else{
-			 $from="From: $name<$email>
-				 \r\nReturn-path: $email";
-				 $subject="Message sent using your contact form";
-				 mail("britneyedok03@gmail.com", $subject, $message, $from);
-				 echo "Email sent!";
-				 }
-				 }
-				 ?>
+		 		  <form action="actionfor.php" method="POST" class="form">
+			<div class="form-group">
+				<input class="textbox-14" name="Name" type="text" placeholder="Name">
+				<span class="focus-border-14"></span>
+			</div>
+			<br>
+			
+            <div class="form-group">
+				<input class="textbox-14" name="Email" type="text" placeholder="Email">
+				<span class="focus-border-14"></span>
+			</div>
+			<br>
+			
+            <div class="form-group">
+				<input class="textbox-14" name="Subject" type="text" placeholder="Subject">
+				<span class="focus-border-14"></span>
+			</div>
+			<br>
+			
+			<div class="form-group">
+				<textarea class="textbox-14" name="Massage"  placeholder="Type your email here..."></textarea>
+				<span class="focus-border-14"></span>
+			</div>
+			<br>
+           
+            <div class="btn-block">
+                <button type="button" onclick = "hello()" class="btn">Submit</button>
+            </div>
+        </form>
 		
 		<div id="map" style="width:1330px;height:300px;background:green"></div>  
         <script>  
