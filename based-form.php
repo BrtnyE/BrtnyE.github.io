@@ -1,49 +1,55 @@
 <?php
+$webmaster_email = "britneyedok03@gmail.com";
 
-if (isset($_POST["submit"])) {
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-	$message = $_POST['subject'];
-		$message = $_POST['message'];
-		$human = intval($_POST['human']);
-		$from = $email; 
-	
-	        $to = 'britneyedok03@gmail.com';
+$feedback_page = "index.html";
+$error_page = "error_message.html";
+$thankyou_page = "thank_you.html";
 
+$Name = $_REQUEST['name'] ;
+$Email = $_REQUEST['email_address'] ;
+$Subject = $_REQUEST['subject'] ;
+$Massage = $_REQUEST['massage'] ;
+$massage = 
+"Name: " . $Name . "\r\n" . 
+"Email: " . $Email . "\r\n" . 
+"Subject: " . $Subject . "\r\n" .
+"Massage ;" . $Massage ;
 
-$subject = "Message from ".$name." ";
-		
-		$body = "From: $name\n E-Mail: $email\n Message:\n $message";
- 
-		// Check if name has been entered
-		if (!$_POST['name']) {
-			$errName = 'Please enter your name';
-		}
-		
-		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'Please enter a valid email address';
-		}
-		    
-		    if (!$_POST['email'] || !filter_var($_POST['email']) {
-			$errEmail = 'Please enter your subject';
-		}
-		
-		//Check if message has been entered
-		if (!$_POST['message']) {
-			$errMessage = 'Please enter your message';
-		}
-		//Check if simple anti-bot test is correct
-		if ($human !== 5) {
-			$errHuman = 'Your anti-spam is incorrect';
-		}
- 
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-	} else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+function isInjected($str) {
+	$injections = array('(\n+)',
+	'(\r+)',
+	'(\t+)',
+	'(%0A+)',
+	'(%0D+)',
+	'(%08+)',
+	'(%09+)'
+	);
+	$inject = join('|', $injections);
+	$inject = "/$inject/i";
+	if(preg_match($inject,$str)) {
+		return true;
+	}
+	else {
+		return false;
 	}
 }
-	}
+
+if (!isset($_REQUEST['email_address'])) {
+header( "Location: $feedback_page" );
+}
+
+elseif (empty($Name) || empty($Email)) {
+header( "Location: $error_page" );
+}
+
+elseif ( isInjected($Name) || isInjected($Email)  || isInjected($Subject)   || isInjected($Massage) ) {
+header( "Location: $error_page" );
+}
+
+else {
+
+	mail( "$webmaster_email", "Feedback Form Results", $msg );
+
+	header( "Location: $thankyou_page" );
+}
 ?>
