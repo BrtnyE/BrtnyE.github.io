@@ -6,7 +6,7 @@ $error_page = "error_message.html";
 $thankyou_page = "thank_you.html";
 
 $Name = $_REQUEST['name'] ;
-$Email = $_REQUEST['email_address'] ;
+$Email = $_REQUEST['email'] ;
 $Subject = $_REQUEST['subject'] ;
 $Massage = $_REQUEST['massage'] ;
 $massage = 
@@ -34,7 +34,7 @@ function isInjected($str) {
 	}
 }
 
-if (!isset($_REQUEST['email_address'])) {
+if (!isset($_REQUEST['email'])) {
 header( "Location: $feedback_page" );
 }
 
