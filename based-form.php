@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<body>
 <?php 
  
 $webmaster_email = "britneyedok03@gmail.com"; 
@@ -54,3 +56,5 @@ else {
  header( "Location: $thankyou_page" ); 
 } 
 ?>
+</body>
+</html>
