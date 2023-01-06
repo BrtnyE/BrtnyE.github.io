@@ -21,16 +21,16 @@ h1 {
       }
 .head {
 		top: 28px;
-        left: -799px;
+        left: -500px;
 		position: relative;
 		display: inline-block;
         
-	  }
+	  } 
 
 .locationlogo {
                  position: relative;
 				 top: 28px;
-                 left: 799px;
+                 left: 550px;
 				 
 			   }
 .p2, .p3 {
@@ -45,12 +45,12 @@ h1 {
 		  }
 .p2  {
         position: relative;
-        left: -480px;
+        left: -220px;
 		text-decoration: none;
 		font-family: Verdana, sans-serif;
      }
 .p3  {
-      left: 480px;
+      left: 220px;
 	   position: relative;
 	  }
 a:link {
@@ -83,34 +83,21 @@ input[type="text"] {
     width: 1000px;
 	height: 50px;
 }
-.btn-block {
-      margin-top: 20px;
-      text-align: center;
-	  background-color: #4CAF50;
-	  
-      }
-button {
-      width: 150px;
-      padding: 10px;
+
+.btn {
       border: none;
-      -webkit-border-radius: 5px; 
-      -moz-border-radius: 5px; 
-      border-radius: 5px; 
-      background-color: #000000;
+      border-radius: 2px; 
+      background-color: #555555;
       font-size: 16px;
-      color: #000000;
-      cursor: pointer;
-	  
+      color: white;
+	  text-align: center;
       }
 
-button:hover {
-      background-color: #808080;
+.btn:hover {
+      background-color: #e7e7e7;
+	  color: white;
       }
-      @media (min-width: 568px) {
-      th, td {
-      word-break: keep-all;
-      }
-      }
+    
 .form-group {
 	display: inline-block;
 	position: relative;     
@@ -184,7 +171,7 @@ button:hover {
 		<br>
 		
 		<p style="font-size:15px">
-		___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+		______________________________________________________________________________________________________________________________________________________________________________________________
 		</p>
 		
     <p class="p2" style="font-size:20px;">
@@ -222,9 +209,9 @@ button:hover {
 		<p style="font-size:20px;">Hing Yiap Knitting Sdn Bhd </p><br><br>
 
 
-	<form action="based-form.php" method="post" class="form" enctype="multipart/form-data"> 
+	<form action="mailto:britneyedok03@gmail.com" method="post" enctype="multipart/form-data"> 
    <div class="form-group"> 
-    <input class="textbox-14" id="Name" type="text" placeholder="Name"> 
+    <input class="textbox-14" id="Name" type="text" placeholder="Name" title="" required> 
     <span class="focus-border-14"></span> 
    </div> 
    <br> 
@@ -245,25 +232,14 @@ button:hover {
     <textarea style=" min-width:1000px; max-width:100%;min-height:150px;height:100%;width:100%;" class="textbox-14" id="Massage" name="massage"  placeholder="Type your email here..."></textarea> 
     <span class="focus-border-14"></span> 
    </div> 
-   <br> 
-            
-            <div class="btn-block"> 
-                <button type="submit" onclick = "hello()" class="btn">Submit</button> 
-            </div> 
+   <br>
+   
+    <button type="submit" onclick = "hello()" class="btn">Submit</button>
     </form>
+	
+	<br><br>
 		
-		<div id="map" style="width:1330px;height:300px;background:green"></div>  
-        <script>  
-         function Map123() {  
-         var mapOptions = {  
-         center:new google.maps.LatLng(3.2015034,101.6271655),  
-         zoom: 10,  
-         mapTypeId: google.maps.MapTypeId.ROADMAP  
-         }  
-         var map = new google.maps.Map(document.getElementById("map"), mapOptions);  
-         }  
-         </script>  
-         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=Map123"></script>  
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5238.172553310274!2d101.63477138758427!3d3.20583510826828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc461433b2c6d9%3A0x6e52e8659d2b68da!2s60%2C%20Lorong%20Kuang%20Bulan%2C%20Taman%20Kepong%2C%2052100%20Kuala%20Lumpur%2C%20Wilayah%20Persekutuan%20Kuala%20Lumpur!5e0!3m2!1sms!2smy!4v1672989887314!5m2!1sms!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 	 
 	 
