@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <head>
-<meta charset="utf-8">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0">
+</head> 
+    
 </head>
-
 
 <style>
 body {
@@ -50,7 +54,7 @@ h1 {
 	   position: relative;
 	  }
 a:link {
-    color:#FFFFFF;
+    rgba(255, 255, 255, .4);
     text-decoration:none;
 }
 a:visited {
@@ -61,6 +65,7 @@ a:active {
     color:#FFFFFF;
     text-decoration:none;
 }
+
 .p3 a:hover{
     color:#FFFFFF;
 }
@@ -73,47 +78,86 @@ a:active {
 .p3 a:active{
     color:#FFFFFF;
 }
-.p1  {
-        background-color: #f4f0ec;
-     }
-.div1 {
-  width: 300px;
-  height: 100px;  
-  padding: 50px;
-  border: 1px solid white;
-  top: 10%;
-  left: -5%;
-  position: relative;
-  display: inline-block;
-  
+	 
+input[type="text"] {
+    width: 1000px;
+	height: 50px;
 }
-.div2 {
-  width: 400px;
-  height: 80px;  
-  padding: 50px;
-  border: 1px solid white;
-  top: 0%;
-  left: 0%;
-  position: relative;
-  display: inline-block;
 
+.btn {
+      border: none;
+      border-radius: 2px; 
+      background-color: #555555;
+      font-size: 16px;
+      color: white;
+	  text-align: center;
+      }
 
+.btn:hover {
+      background-color: #e7e7e7;
+	  color: white;
+      }
+    
+.form-group {
+	display: inline-block;
+	position: relative;     
 }
-.div3 {
-  width: 300px;
-  height: 100px;  
-  padding: 50px;
- border: 1px solid white;
- top: 10%;
-  left: 6%;
-  position: relative;
-  display: inline-block;
- 
+.textbox-14:hover {
+	  border: 2px solid #000000;
+      }
+      
+.textbox-14 {
+	padding: 2px 0;
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+	width: 275px;
+	letter-spacing: 1px;
+	border: 1px solid transparent;
+	border-bottom-color: #ccc;
+	transition: 0.4s;
+	outline: none;
 }
-.caption {
-    display: block;
+.textbox-14 ~ .focus-border-14 {
+	position: absolute;
+	height: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transition: 0.4s;
+	z-index: -1;
 }
-	  
+.textbox-14:focus ~ .focus-border-14 {
+	transition: 0.4s;
+	height: 45px;
+	border: 2px solid #000000;
+	z-index: 1;
+}
+.textbox-14:focus {
+	padding: 2px 5px 2px;
+	transition: 0.4s;
+}  
+.textarea{
+	padding: 2px 0;
+	font-size: 14px;
+	color: #333;
+	height: 100%;
+	width: 100%;
+	letter-spacing: 1px;
+	border: 1px solid transparent;
+	border-bottom-color: #00000;
+	transition: 0.4s;
+	outline: none;
+}
+.textarea-1:focus-border-14{
+	position: absolute;
+	height: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transition: 0.4s;
+	z-index: -1;
+}  
 </style>
 
 <body>
@@ -124,6 +168,7 @@ a:active {
 		<a href="https://www.google.com/maps/place/60,+Lorong+Kuang+Bulan,+Taman+Kepong,+52100+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur/@3.2062079,101.6366974,17z/data=!3m1!4b1!4m5!3m4!1s0x31cc461433b2c6d9:0x6e52e8659d2b68da!8m2!3d3.2062079!4d101.6366974">
 		<img class ="locationlogo" src="location.png" style="width:10px;height:15px;">
 		</a>
+		<br>
 		
 		<p style="font-size:15px">
 		______________________________________________________________________________________________________________________________________________________________________________________________
@@ -141,42 +186,69 @@ a:active {
 	    </p>
 		<br><br>
 	    
-     </h1>
+      </h1>
 </div>
-<br><br><br>	
-<p style="font-size:50px; color: #001F3F;">HING YIAP KNITTING SDN BHD</p>	
-<br><br>
-	   
-<div class="div1" style="padding: 10px; border: 2px solid white;">
-               <img src="p1.webp" >	<br><br><br>	   
-			   <p style="font-size:15px">
-               <span class="caption" style="font-size: 25px; color: #001F3F;"><strong>OUR VISION </strong><br><br></p>
-				“Fully integrated smart manufacturing facilities to meet the ever changing demands in the supply <br>chain network”.<br></span>
-			  
-</div>
-<div class="div2" style="padding: 10px; border: 2px solid white;">		   
-			   <img src="p2.webp" ><br><br><br>
-			   <p style="font-size:15px">
-               <span class="caption" style="font-size: 25px; color: #001F3F;"><strong>OUR MISSION </strong><br><br></p>
-				“Continuously modernizing our manufacturing facilities and optimizing usage of resources to enhance production efficiency, productivity and competitiveness”.</span>
-			   
-</div>
-<div class="div3" style="padding: 10px; border: 2px solid white;">		   
-			   <img src="p3.webp"><br><br><br>
-			   <p style="font-size:15px">
-               <span class="caption" style="font-size: 25px;color: #001F3F;"><strong>OUR VALUES </strong><br><br></p>
-			   <ul style="text-align: left;">
-			   <li>High and Consistent Quality</li>
-			   <li>Reliable Delivery</li>
-			   <li>Competitive Prices</li></span>
-			   <br>
-			   </ul>
-			  
-			   </div>
+	 
+	    <img src="image1.webp" height="35%" width="100%">
+		<p style="font-size:30px">HING YIAP KNITTING SDN BHD </p><br>
+           <p style="font-size:20px"><strong><i>Synergistic Inter-Dependency</i></strong><br>
+           The vertically integrated portfolio of this company is put in place with the objective of benefiting from group synergy<br> and collective co-operation.
+           <br><br>
+           Core Business- "manufacturing"...<br>
+           Manufacturing forms the core activity of this company. After more than 26 years’ experience in the industry, the <br>company consider themselves as one of the exceptional integrated factories in the industry. The factory prides itself <br>on having in-house knitting, dyeing, designing, tailoring and cutting, sewing, finishing and distribution facilities. The<br> ability to control these activities is their competitive advantage amongst the company competitors.
+           <br><br>
+           Downstream distribution network "pull strategy"<br>
+           The rationale for their design and market driven strategy is to generate demand for the manufacturing business. <br>Since the mid-80s, this company has consciously increased its design and marketing expertise.
+         </p>
+		 <img src="image2.webp">
+	 
+	 
+	 <br><br>
+	
+	    <p style="font-size:40px;color:#2c3e4c;"> CONTACT US </p>
+		<p style="font-size:20px;">Hing Yiap Knitting Sdn Bhd </p><br><br>
+
+
+	<form action="mailto:britneyedok03@gmail.com" method="post" enctype="multipart/form-data"> 
+   <div class="form-group"> 
+    <input class="textbox-14" id="Name" type="text" placeholder="Name" title="" required> 
+    <span class="focus-border-14"></span> 
+   </div> 
+   <br> 
+    
+            <div class="form-group"> 
+    <input class="textbox-14" id="Email" type="text" placeholder="Email"> 
+    <span class="focus-border-14"></span> 
+   </div> 
+   <br> 
+    
+            <div class="form-group"> 
+    <input class="textbox-14" id="Subject" type="text" placeholder="Subject"> 
+    <span class="focus-border-14"></span> 
+   </div> 
+   <br> 
+     
+   <div class="form-group"> 
+    <textarea style=" min-width:1000px; max-width:100%;min-height:150px;height:100%;width:100%;" class="textbox-14" id="Massage" name="massage"  placeholder="Type your email here..."></textarea> 
+    <span class="focus-border-14"></span> 
+   </div> 
+   <br>
+   
+    <button type="submit" onclick = "hello()" class="btn">Submit</button>
+    </form>
+	
+	<br><br>
+		
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5238.172553310274!2d101.63477138758427!3d3.20583510826828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc461433b2c6d9%3A0x6e52e8659d2b68da!2s60%2C%20Lorong%20Kuang%20Bulan%2C%20Taman%20Kepong%2C%2052100%20Kuala%20Lumpur%2C%20Wilayah%20Persekutuan%20Kuala%20Lumpur!5e0!3m2!1sms!2smy!4v1672989887314!5m2!1sms!2smy" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	 
+	 
 	 <br><br><br><br><br>
 	 <p> 03-62766633
-     <br><br><br>
-     ©2022 by Hing Yiap Knitting Sdn Bhd (235252-D)
+         <br><br><br>
+         ©2022 by Hing Yiap Knitting Sdn Bhd (235252-D)
 	 </p>
+	
 </body>
+
 </html>
